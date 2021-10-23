@@ -2,7 +2,6 @@
 * * *
 Primer avance de la aplicacion web (Backend)
 * * *
-*   [Integrantes](#integrantes)
    *   Salirrosas Soto Rafael
    *   Ruiz Marquina Deybi)
    *   Hoyos Rodriguez Maria)
