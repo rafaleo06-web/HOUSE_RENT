@@ -21,8 +21,8 @@ public class ClienteController {
 
     @GetMapping
     public ResponseEntity<List<Cliente>> listarClientes(){
-        List<Cliente> pacientes=clienteService.listarClientes();
-        return  new ResponseEntity<List<Cliente>>(pacientes, HttpStatus.CREATED);
+        List<Cliente> clientes=clienteService.listarClientes();
+        return  new ResponseEntity<List<Cliente>>(clientes, HttpStatus.CREATED);
     }
 
     @GetMapping("/{id}")

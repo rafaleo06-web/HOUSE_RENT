@@ -4,7 +4,6 @@ import com.houserent.api.model.Cliente;
 import com.houserent.api.repository.ClienteRepository;
 import com.houserent.api.services.ClienteService;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
 @Service
@@ -24,7 +23,6 @@ public class ClienteServiceImpl implements ClienteService {
     @Override
     public Cliente modificarCliente(Cliente cliente) {
         return clienteRepository.save(cliente);
-
     }
 
     @Override
