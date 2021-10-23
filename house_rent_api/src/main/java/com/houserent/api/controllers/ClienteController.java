@@ -34,7 +34,7 @@ public class ClienteController {
     @PostMapping
     public ResponseEntity<Cliente> registrarCliente(@RequestBody Cliente cliente){
         Cliente clienteNew=clienteService.registrarCliente(cliente);
-        return  new ResponseEntity<Cliente>(clienteNew, HttpStatus.CREATED);
+        return new ResponseEntity<Cliente>(clienteNew, HttpStatus.CREATED);
     }
 
     @PutMapping

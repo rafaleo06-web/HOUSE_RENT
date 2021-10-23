@@ -1,8 +1,8 @@
 package com.houserent.api.model;
 
-public class Mensajeria {
-    private Integer id_mensajeria;
-    private String asunto;
+public class Puntuacion {
+    private Integer id_puntuacion;
     private String descripcion;
     private String archivo;
+
 }
