@@ -1,6 +1,8 @@
 package com.houserent.api.model;
 
-import com.sun.istack.NotNull;
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
@@ -8,31 +10,18 @@ import java.time.LocalDateTime;
 @Table(name="reserva")
 public class Reserva {
 
+    @Getter @Setter
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idReserva;
 
-    @NotNull
+    @Getter @Setter
     @Column(name="fecha", nullable = false)
     private LocalDateTime fecha;
-
-    public Integer getIdReserva() {
-        return idReserva;
-    }
-
-    public void setIdReserva(Integer idReserva) {
-        this.idReserva = idReserva;
-    }
-
-    public LocalDateTime getFecha() {
-        return fecha;
-    }
-
-    public void setFecha(LocalDateTime fecha) {
-        this.fecha = fecha;
-    }
 
     @ManyToOne
     @JoinColumn(name="id_cliente", nullable=false, foreignKey=@ForeignKey(name="FK_reserva_cliente"))
     private Cliente cliente;
+
+
 }
