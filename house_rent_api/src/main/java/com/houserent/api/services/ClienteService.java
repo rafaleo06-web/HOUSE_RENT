@@ -1,7 +1,6 @@
 package com.houserent.api.services;
 
 import com.houserent.api.model.Cliente;
-
 import java.util.List;
 
 public interface ClienteService {

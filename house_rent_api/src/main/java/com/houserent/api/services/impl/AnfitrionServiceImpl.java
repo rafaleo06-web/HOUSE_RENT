@@ -4,7 +4,6 @@ import com.houserent.api.model.Anfitrion;
 import com.houserent.api.repository.AnfitrionRepository;
 import com.houserent.api.services.AnfitrionService;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
 @Service
