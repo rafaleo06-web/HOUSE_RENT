@@ -6,6 +6,7 @@ import com.houserent.api.services.HabitacionService;
 import org.springframework.stereotype.Service;
 import java.util.List;
 
+@Service
 public class HabitacionServiceImpl implements HabitacionService {
 
     private final HabitacionRepository habitacionRepository;
