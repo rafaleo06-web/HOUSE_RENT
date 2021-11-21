@@ -1,12 +1,11 @@
 package com.houserent.api.controllers;
 
-import com.houserent.api.model.Cliente;
 import com.houserent.api.model.Habitacion;
-import com.houserent.api.services.ClienteService;
 import com.houserent.api.services.HabitacionService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
 
 import javax.validation.Valid;
 import java.util.List;
