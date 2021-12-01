@@ -4,6 +4,8 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
@@ -34,13 +36,14 @@ public class Habitacion {
 
     @Getter @Setter
     @NotNull
-    @Size(min=1, max=5,message = "en minimo de personas en una habitacion es de  y el maximo de 5")
-    @Column(name="cantidadpersonas", nullable = false, length = 9)
-    private String cantidadpersonas;
+    @Min(value=1)
+    @Max(value=5)
+    @Column(name="cantidadpersonas", nullable = false)
+    private Integer cantidadpersonas;
 
     @Getter @Setter
     @NotNull
-    @Size(min=1,message = "Minimo de pisos es 1")
-    @Column(name="pisoHabitacion", nullable = false, length = 9)
-    private String pisoHabitacion;
+    @Min(value=1)
+    @Column(name="pisoHabitacion", nullable = false)
+    private Integer pisoHabitacion;
 }

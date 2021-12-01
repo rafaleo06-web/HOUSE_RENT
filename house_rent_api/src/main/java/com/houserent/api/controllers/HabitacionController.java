@@ -11,7 +11,7 @@ import javax.validation.Valid;
 import java.util.List;
 
 @RestController
-@RequestMapping("/Habitaciones")
+@RequestMapping("/habitaciones")
 public class HabitacionController {
 
     private final HabitacionService habitacionService;
@@ -28,8 +28,8 @@ public class HabitacionController {
 
 
     @PostMapping
-    public ResponseEntity<Habitacion> registrarCliente(@Valid @RequestBody Habitacion cliente){
-        Habitacion habitacionNew=habitacionService.registrarHabitacion(cliente);
+    public ResponseEntity<Habitacion> registrarHabitacion(@Valid @RequestBody Habitacion habitacion){
+        Habitacion habitacionNew=habitacionService.registrarHabitacion(habitacion);
         return new ResponseEntity<Habitacion>(habitacionNew, HttpStatus.CREATED);
     }
 
