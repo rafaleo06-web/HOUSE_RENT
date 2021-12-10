@@ -2,6 +2,8 @@ package com.houserent.api.controllers;
 
 import com.houserent.api.model.Cliente;
 import com.houserent.api.services.ClienteService;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -13,6 +15,7 @@ import java.util.List;
 @RequestMapping("/clientes")
 public class ClienteController {
 
+    @Autowired
     private final ClienteService clienteService;
 
     public ClienteController(ClienteService clienteService) {

@@ -8,7 +8,6 @@ public interface HospedajeService {
 
     Hospedaje registrarHospedaje(Hospedaje hospedaje);
     Hospedaje modificarHospedaje(Hospedaje hospedaje);
-    Hospedaje realizarCalificacionHospedaje(Hospedaje hospedaje);
     List<Hospedaje> listarHospedaje();
     void eliminarHospedaje(Integer idHospedaje);
 }

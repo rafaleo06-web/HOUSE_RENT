@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.util.List;
 
+@RestController
+@RequestMapping("/calificaciones")
 public class CalificacionController {
     private final CalificacionService calificacionService;
 

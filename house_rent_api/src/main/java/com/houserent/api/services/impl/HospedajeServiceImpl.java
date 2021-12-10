@@ -21,11 +21,6 @@ public class HospedajeServiceImpl implements HospedajeService {
     public Hospedaje modificarHospedaje(Hospedaje hospedaje) { return hospedajeRepository.save(hospedaje);}
 
     @Override
-    public Hospedaje realizarCalificacionHospedaje(Hospedaje hospedaje) {
-        return hospedajeRepository.save(hospedaje);
-    }
-
-    @Override
     public List<Hospedaje> listarHospedaje() {return hospedajeRepository.findAll(); }
 
     @Override
