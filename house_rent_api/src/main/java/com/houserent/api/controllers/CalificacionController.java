@@ -7,16 +7,16 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-import java.util.List;
 
+@RestController
+@RequestMapping("/Calificaciones")
 public class CalificacionController {
+
     private final CalificacionService calificacionService;
 
     public CalificacionController(CalificacionService calificacionService) {
         this.calificacionService = calificacionService;
     }
-
-
 
     @PostMapping
     public ResponseEntity<Calificacion> agregarCalificacion(@Valid @RequestBody Calificacion calificacion){
