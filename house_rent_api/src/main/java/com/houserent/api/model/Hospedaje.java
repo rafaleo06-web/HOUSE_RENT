@@ -46,4 +46,6 @@ public class Hospedaje {
     @Column(name="provincia", nullable = false, length = 30)
     private String provincia;
 
+
+
 }
