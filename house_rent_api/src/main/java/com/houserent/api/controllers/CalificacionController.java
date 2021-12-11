@@ -9,11 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 
 @RestController
-<<<<<<< HEAD
 @RequestMapping("/calificaciones")
-=======
-@RequestMapping("/Calificaciones")
->>>>>>> 73dc7a6f0242d240e6f11d7e206c1d70082be375
 public class CalificacionController {
 
     private final CalificacionService calificacionService;
