@@ -10,7 +10,6 @@ import javax.validation.constraints.Size;
 
 @Entity
 @Table(name="anfitriones")
-
 public class Anfitrion {
 
     @Getter @Setter

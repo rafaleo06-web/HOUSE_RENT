@@ -2,6 +2,7 @@ package com.houserent.api.controllers;
 
 import com.houserent.api.model.Calificacion;
 import com.houserent.api.services.CalificacionService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -12,6 +13,7 @@ import javax.validation.Valid;
 @RequestMapping("/calificaciones")
 public class CalificacionController {
 
+    @Autowired
     private final CalificacionService calificacionService;
 
     public CalificacionController(CalificacionService calificacionService) {

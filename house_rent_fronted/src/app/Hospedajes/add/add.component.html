@@ -1,0 +1,33 @@
+<div class="container col-md-6">
+  <div class="card">
+    <div class="card-header">
+      <h3>Agregar Hospedaje</h3>
+    </div>
+    <div class="card-body">
+      <form action="">
+        <div class="form-group">
+          <label for="">Nombre:</label>
+          <input [(ngModel)]="hospedaje.nombre" name="name" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="">Descripcion:</label>
+          <input [(ngModel)]="hospedaje.descripcion" name="descripcion" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="">Ciudad:</label>
+          <input [(ngModel)]="hospedaje.ciudad" name="ciudad" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="">Direccion:</label>
+          <input [(ngModel)]="hospedaje.direccion" name="direccion" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="">Provincia:</label>
+          <input [(ngModel)]="hospedaje.provincia" name="provincia" type="text" class="form-control">
+        </div>
+        
+        <button (click)="Guardar()" class="btn btn-danger">Guardar</button>
+      </form>
+    </div>
+  </div>
+</div>

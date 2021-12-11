@@ -2,6 +2,7 @@ package com.houserent.api.controllers;
 
 import com.houserent.api.model.Anfitrion;
 import com.houserent.api.services.AnfitrionService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -13,6 +14,7 @@ import java.util.List;
 @RequestMapping("/anfitriones")
 public class AnfitrionController {
 
+    @Autowired
     private final AnfitrionService anfitrionService;
 
     public AnfitrionController(AnfitrionService anfitrionService) {

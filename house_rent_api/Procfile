@@ -1,0 +1,1 @@
+web: java -Dserver.port=$PORT -jar  target/mitocode-m3-demo04-0.0.1-SNAPSHOT.jar
