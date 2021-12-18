@@ -1,6 +1,7 @@
 package com.houserent.api.services.impl;
 
 import com.houserent.api.model.Habitacion;
+import com.houserent.api.model.Hospedaje;
 import com.houserent.api.repository.HabitacionRepository;
 import com.houserent.api.services.HabitacionService;
 import org.springframework.stereotype.Service;
@@ -34,5 +35,10 @@ public class HabitacionServiceImpl implements HabitacionService {
     @Override
     public void eliminarHabitacion(Integer idHabitacion) {
         habitacionRepository.deleteById(idHabitacion);
+    }
+
+    @Override
+    public Habitacion obtenerHabitacionPorId(Integer idHabitacion) {
+        return habitacionRepository.findById(idHabitacion).orElse(new Habitacion());
     }
 }

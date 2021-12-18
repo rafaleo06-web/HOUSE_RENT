@@ -14,6 +14,7 @@ public class Hospedaje {
     @Setter
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    //@Column(name = "idHospedaje", nullable = false, length = 100)
     private Integer idHospedaje;
 
     @Getter @Setter
@@ -24,7 +25,7 @@ public class Hospedaje {
 
     @Getter @Setter
     @NotNull
-    @Size(min=20, message = "Descripcion debe tener COMO minimo 20 caracteres")
+    @Size(min=10, message = "Descripcion debe tener COMO minimo 20 caracteres")
     @Column(name="descripcion", nullable = false, length = 70)
     private String descripcion;
 

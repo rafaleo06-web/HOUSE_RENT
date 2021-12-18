@@ -1,6 +1,7 @@
 package com.houserent.api.controllers;
 
 import com.houserent.api.model.Habitacion;
+import com.houserent.api.model.Hospedaje;
 import com.houserent.api.services.HabitacionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.List;
+@CrossOrigin(origins ="http://localhost:4200",maxAge=3600)
 @RestController
 @RequestMapping("/habitaciones")
 public class HabitacionController {
@@ -44,6 +46,12 @@ public class HabitacionController {
     public ResponseEntity<Void> eliminarHabitacion(@PathVariable("id") Integer idHabitacion){
         habitacionService.eliminarHabitacion(idHabitacion);
         return  new ResponseEntity<Void>(HttpStatus.NO_CONTENT);
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Habitacion> obtenerHabitacionPorId(@PathVariable("id") Integer idHabitacion){
+        Habitacion habitacion=habitacionService.obtenerHabitacionPorId(idHabitacion);
+        return  new ResponseEntity<Habitacion>(habitacion, HttpStatus.OK);
     }
 
 }

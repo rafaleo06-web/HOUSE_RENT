@@ -26,7 +26,7 @@ public class Habitacion {
 
     @Getter @Setter
     @NotNull
-    @Size(min=20, message = "Descripcion debe tener COMO minimo 20 caracteres")
+    @Size(min=10, message = "Descripcion debe tener COMO minimo 20 caracteres")
     @Column(name="descripcion", nullable = false, length = 70)
     private String descripcion;
 
