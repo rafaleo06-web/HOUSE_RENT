@@ -1,6 +1,8 @@
 package com.houserent.api.controllers;
 
+import com.houserent.api.model.Anfitrion;
 import com.houserent.api.model.Hospedaje;
+import com.houserent.api.services.AnfitrionService;
 import com.houserent.api.services.HospedajeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -16,6 +18,7 @@ public class HospedajeController {
 
     @Autowired
     private final HospedajeService hospedajeService;
+
     public HospedajeController(HospedajeService hospedajeService) {
         this.hospedajeService = hospedajeService;
     }
@@ -25,6 +28,8 @@ public class HospedajeController {
         List<Hospedaje> hospedaje=hospedajeService.listarHospedaje();
         return new ResponseEntity<List<Hospedaje>>(hospedaje, HttpStatus.CREATED);
     }
+
+
 
     @PostMapping
     public ResponseEntity<Hospedaje> registrarHospedaje(@Valid @RequestBody Hospedaje hospedaje){
@@ -39,9 +44,15 @@ public class HospedajeController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> eliminarHospedaje(@PathVariable("id") Integer idHospedaje){
+    public ResponseEntity<Void> eliminarHospedaje(@PathVariable("id") Integer idHospedaje) {
         hospedajeService.eliminarHospedaje(idHospedaje);
         return new ResponseEntity<Void>(HttpStatus.NO_CONTENT);
+    }
+    @GetMapping("/{id}")
+    public ResponseEntity<Hospedaje> obtenerHospedajePorId(@PathVariable("id") Integer idHospedaje){
+        Hospedaje hospedaje=hospedajeService.obtenerHospedajePorId(idHospedaje);
+        return  new ResponseEntity<Hospedaje>(hospedaje, HttpStatus.OK);
+
     }
 
 }
