@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <h3>LISTA DE HABITACIONES</h3>
+      <div class="container text-Center">
+        <button (click)="addHabitacion()" class="btn btn-info">Agregar Nueva</button>
+      </div>
+    </div>
+    <div class="card-body">
+      <table class="table table-hover">
+        <thead>
+          <tr class="text-center">
+            <th>ID</th>
+            <th>NOMBRE</th>
+            <th>DESCRIPCION</th>
+            <th>FOTO</th>
+            <th>CANTIDAD DE PERSONAS</th>
+            <th>PISO</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let habitacion of habitaciones" class="text-center">
+            <td>{{habitacion.idHabitacion}}</td>
+            <td>{{habitacion.nombres}}</td>
+            <td>{{habitacion.descripcion}}</td>
+            <td>{{habitacion.foto}}</td>
+            <td>{{habitacion.cantidadpersonas}}</td>
+            <td>{{habitacion.pisoHabitacion}}</td>
+            <td>
+              <button (click)="Editar(habitacion)" class="btn btn-warning">Editar</button>
+              <button (click)="Delete(habitacion)" class="btn btn-danger" style="margin-left: 10px;">Eliminar</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
