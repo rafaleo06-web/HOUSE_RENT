@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <h3>LISTA DE HOSPEDAJES</h3>
+      <div class="container text-Center">
+        <button (click)="addHospedaje()" class="btn btn-info">Agregar Nuevo</button>
+      </div>
+    </div>
+    <div class="card-body">
+      <table class="table table-hover">
+        <thead>
+          <tr class="text-center">
+            <th>ID</th>
+            <th>NOMBRES</th>
+            <th>DESCRIPCION</th>
+            <th>CIUDAD</th>
+            <th>DIRECCION</th>
+            <th>PROVINCIA</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let hospedaje of hospedajes" class="text-center">
+            <td>{{hospedaje.idHospedaje}}</td>
+            <td>{{hospedaje.nombre}}</td>
+            <td>{{hospedaje.descripcion}}</td>
+            <td>{{hospedaje.ciudad}}</td>
+            <td>{{hospedaje.direccion}}</td>
+            <td>{{hospedaje.provincia}}</td>
+            <td>
+              <button (click)="Editar(hospedaje)" class="btn btn-warning">Editar</button>
+              <button (click)="Delete(hospedaje)" class="btn btn-danger" style="margin-left: 10px;">Eliminar</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

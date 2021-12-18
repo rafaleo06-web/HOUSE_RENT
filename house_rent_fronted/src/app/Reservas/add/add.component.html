@@ -1,0 +1,49 @@
+<div class="container col-md-6">
+  <div class="card">
+    <div class="card-header">
+      <h3>Agregar Reserva</h3>
+    </div>
+    <div class="card-body">
+      <form action="">
+        <div class="form-group">
+          <label for="">Cliente:</label>
+          <p>
+            <select name="selectcliente" [(ngModel)]="reservas.clientes" class="form-control">
+              <option [value]="persona.idCliente" *ngFor="let persona of personas">{{persona.nombres}} {{persona.apellidos}}</option>
+            </select>
+            </p>
+        </div>
+        <div class="form-group">
+          <label for="">Hospedaje:</label>
+          <p>
+            <select name="selecthospedaje" [(ngModel)]="reservas.hospedajes" class="form-control">
+              <option [value]="hospedaje.idHospedaje" *ngFor="let hospedaje of hospedajes">{{hospedaje.nombre}}</option>
+            </select>
+            </p>
+        </div>
+        <div class="form-group">
+          <label for="">Habitacion:</label>
+          <p>
+            <select name="selecthabitacion" [(ngModel)]="reservas.habitacion" class="form-control">
+              <option [value]="habitacion.idHabitacion" *ngFor="let habitacion of habitaciones">{{habitacion.nombres}}</option>
+            </select>
+            </p>
+        </div>
+        <div class="form-group">
+          <label for="">Fecha de Reserva:</label>
+          <input [(ngModel)]="reservas.fecha" name="fecha" type="text" class="form-control" placeholder="dd/mm/yyyy">
+        </div>
+        <!-- <div class="form-group">
+          <label for="">Telefono:</label>
+          <input [(ngModel)]="reserva.telefono" name="telefono" type="text" class="form-control">
+        </div> -->
+        <div class="form-group">
+          <label for="">Descripcion:</label>
+          <input [(ngModel)]="reservas.descripcion" name="descripcion" type="text" class="form-control">
+        </div>
+        
+        <button (click)="Guardar()" class="btn btn-danger">Guardar</button>
+      </form>
+    </div>
+  </div>
+</div>

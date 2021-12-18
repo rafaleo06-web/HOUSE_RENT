@@ -1,0 +1,18 @@
+<!-- <app-header></app-header> -->
+<div  style="text-align:center">
+  <h1>
+    BIENVENIDO A HOUSE RENT
+  </h1>
+  <img width="130" alt="Angular Logo" src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/house-rent-logo-template-design-1c571ea70162b28fe0b863854a3b33b5_screen.jpg?ts=1615447430">
+</div>
+<br> 
+<div class="container text-center">
+  <button (click)="Clientes()" class="btn btn-info">CLIENTES</button>
+  <button (click)="Hospedajes()" class="btn btn-info" style="margin-left: 10px;">HOSPEDAJES</button> 
+  <button (click)="Habitaciones()" class="btn btn-info" style="margin-left: 10px;">HABITACIONES</button> 
+  <button (click)="Reservas()" class="btn btn-info" style="margin-left: 10px;">RESERVAS</button> 
+</div>
+<div class="container p-5">
+  <router-outlet></router-outlet>
+</div>
+
